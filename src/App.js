@@ -35,7 +35,7 @@ function App() {
           addCart={addCart}
         />
       ))}
-      <Cart cart={cart} />
+      <Cart cart={cart} addCart={addCart} />
 
       <Footer date={date} />
     </Fragment>

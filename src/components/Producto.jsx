@@ -9,14 +9,28 @@ const Product = ({ product, cart, addCart, products }) => {
     addCart([...cart, product]);
     // console.log("comprando....", product);
   };
+  const deleteProducto = (id) => {
+    //
+    const products = cart.filter((product) => product.id !== id);
+    //colocar los productos en el state
+    addCart(products);
+  };
+
   return (
     <div>
       <h2>{name}</h2>
       <h3>€{price}</h3>
       {/* //creamos la funciont selectionado el */}
-      <button type="button" onClick={() => selectProducto(id)}>
-        Buy
-      </button>
+      {products ? (
+        //si existe el producto tenemos el boton comprar
+        <button type="button" onClick={() => selectProducto(id)}>
+          Buy
+        </button>
+      ) : (
+        <button type="button" onClick={() => deleteProducto(id)}>
+          Delete
+        </button>
+      )}
     </div>
   );
 };
