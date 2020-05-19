@@ -32,7 +32,16 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  width: 400px;
 }

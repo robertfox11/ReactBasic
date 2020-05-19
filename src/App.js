@@ -1,9 +1,10 @@
 import React, { Fragment, useState } from "react";
 // import logo from "./logo.svg";
-// import "./App.css";
+
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import Product from "./components/Producto.jsx";
+import Cart from "./components/Cart.jsx";
 
 function App() {
   const date = new Date().getFullYear();
@@ -34,6 +35,7 @@ function App() {
           addCart={addCart}
         />
       ))}
+      <Cart cart={cart} />
 
       <Footer date={date} />
     </Fragment>
