@@ -14,6 +14,8 @@ function App() {
     { id: 4, name: "Shoes Vanilla JS", price: 40 },
     { id: 5, name: "Skirt Angular JS", price: 50 },
   ]);
+  //agregar carrito
+  const [cart, addCart] = useState([]);
   return (
     <Fragment>
       <Header title="Tienda Virtual" />
@@ -26,6 +28,10 @@ function App() {
           //cada componenete debe tener un key que lo haga unico7
           key={product.id}
           product={product}
+          //agregamos unos props para que se puede agregar los datos
+          products={products}
+          cart={cart}
+          addCart={addCart}
         />
       ))}
 
