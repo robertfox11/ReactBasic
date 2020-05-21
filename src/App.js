@@ -6,15 +6,12 @@ import Footer from "./components/Footer.jsx";
 import Product from "./components/Producto.jsx";
 import Cart from "./components/Cart.jsx";
 
+import json from "./json";
+console.log(json, "hola");
+
 function App() {
   const date = new Date().getFullYear();
-  const [products, saveProduct] = useState([
-    { id: 1, name: "Shirt React JS", price: 10 },
-    { id: 2, name: "T-Shirt Vue JS", price: 20 },
-    { id: 3, name: "Pants Node JS", price: 30 },
-    { id: 4, name: "Shoes Vanilla JS", price: 40 },
-    { id: 5, name: "Skirt Angular JS", price: 50 },
-  ]);
+  const [products, saveProduct] = useState(json);
   //agregar carrito
   const [cart, addCart] = useState([]);
   return (
